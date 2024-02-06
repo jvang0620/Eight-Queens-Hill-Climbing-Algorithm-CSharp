@@ -49,10 +49,15 @@ This program was created from the ground up, drawing inspiration from various so
 
 - **Board Visualization**: The printBoard() method displays the current state of the board, facilitating visualization of queen placements.
 
-### Usage:
+### Getting Started:
 
-1. **Compile**: Compile the C# source code by selecting the `play` button on Visual Studio 2022 IDE.
-2. **Output**: The program will display the progress of the solution process, including the current state, heuristic values, and solution details.
+1. Clone the repository to your local machine with one of the follow:
+
+   HTTPS: <pre><code>git clone https://github.com/jvang0620/Eight-Queens-Hill-Climbing-Algorithm-CSharp</code></pre>
+   SSH: <pre><code>git clone https://github.com/jvang0620/Eight-Queens-Hill-Climbing-Algorithm-CSharp</code></pre>
+
+2. **Compile/Run**: Compile and run the C# source code by selecting the `play` button on Visual Studio 2022 IDE.
+3. **Output**: The program will display the progress of the solution process, including the current state, heuristic values, and solution details.
 
 ### Developed Using:
 
