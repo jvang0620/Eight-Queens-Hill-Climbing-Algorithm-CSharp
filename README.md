@@ -9,7 +9,7 @@ This program was created from the ground up, drawing inspiration from various so
 ### Example of Program Output Screenshots
 
 ![Examples Of Program](/imgs/img_1a.PNG)
-![Examples Of Program](img_1b.PNG)
+![Examples Of Program](/imgs/img_1b.PNG)
 
 ##### 'Current h' Meaning:
 
