@@ -49,6 +49,94 @@ This program was created from the ground up, drawing inspiration from various so
 
 - **Board Visualization**: The printBoard() method displays the current state of the board, facilitating visualization of queen placements.
 
+## 1. Main Program
+
+### Main Method:
+
+- Creates a `Solver` instance.
+- Calls the `SolveQueensProblem` method to compute a solution.
+- Uses the `Board` class to display the solution.
+
+---
+
+## 2. Classes Overview
+
+### **Board Class**
+
+Represents the chessboard and manages board-related operations.
+
+#### Key Methods:
+
+1. **`GenerateRandomState`**:
+   - Creates a random initial state, represented as an array of 8 integers. Each index of the array represents a column, and the value at that index represents the row where the queen is placed.
+2. **`PrintBoard`**:
+   - Prints the chessboard in a visual format, using `1` to represent a queen and `0` for an empty cell.
+3. **`IsGoalState`**:
+   - Checks if the current state is a solution by ensuring no two queens attack each other.
+
+---
+
+### **HeuristicCalculator Class**
+
+Calculates the **heuristic value** of a board state and generates neighbors with better (lower) heuristic values.
+
+#### Key Methods:
+
+1. **`CalculateHeuristic`**:
+   - Computes the heuristic for a state, which represents the number of pairs of queens attacking each other. A solution has a heuristic of `0`.
+2. **`GetBestNeighbor`**:
+   - Finds the best neighbor state with a lower heuristic by trying all possible moves for each queen and selecting the one with the minimum heuristic.
+
+---
+
+### **Solver Class**
+
+Implements a **hill-climbing algorithm with random restarts** to solve the problem.
+
+#### Key Logic in `SolveQueensProblem`:
+
+1. Generates an initial random state.
+2. Iteratively improves the state by moving to a better neighbor (lower heuristic).
+3. If no better neighbor is found (local minimum), the algorithm restarts with a new random state.
+4. Tracks the number of restarts and state changes.
+5. Stops when the goal state (heuristic = 0) is reached.
+
+---
+
+## 3. Algorithm Explanation
+
+### **Initial State**:
+
+- A random placement of 8 queens is generated.
+
+### **Hill-Climbing**:
+
+- Evaluates the current state's heuristic.
+- Searches for the best neighboring state (smallest heuristic).
+- Moves to the best neighbor if it improves the heuristic.
+
+### **Random Restarts**:
+
+- If no better neighbor exists (local minimum), the program generates a new random state and starts over.
+
+### **Goal State**:
+
+- When the heuristic reaches `0`, a solution is found, and the algorithm stops.
+
+---
+
+## 4. Output Example
+
+### **While Solving**:
+
+- Displays the current heuristic and board configuration.
+- Logs the number of restarts and state changes.
+
+### **When Solved**:
+
+- Prints the solution board.
+- Displays the number of restarts and state changes.
+
 ### Getting Started:
 
 1. Clone the repository to your local machine with one of the follow:
